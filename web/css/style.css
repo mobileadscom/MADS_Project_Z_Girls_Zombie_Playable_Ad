@@ -1,0 +1,90 @@
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInhalf {
+  to {
+    opacity: 0.9;
+  }
+}
+
+@-webkit-keyframes fadeIn{
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeInhalf {
+  to {
+    opacity: 0.9;
+  } 
+}
+
+body{
+	margin: 0px;
+}
+
+
+.container {
+    position: relative;
+    width: 320px;
+    height: 480px;
+}
+
+#progress {
+  position: absolute; 
+  top: 0px;
+  left: 0px;
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  z-index: 2;
+  padding: 100px 50px;
+  box-sizing: border-box;
+  font-family: "Arial";
+  font-weight: 700;
+}
+
+#progress p {
+  color: white;
+  font-size: 30px;
+}
+
+#progress #percent {
+  font-size: 40px;
+  text-shadow: 0 0 10px #228DFF;
+}
+
+#progress #bar {
+  width: 0px;
+  margin-left: calc((100% - 300px) / 2);
+  height: 8px;
+  background-color: cyan;
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(81, 203, 238, 1);
+  transition: all 0.3s;
+}
+
+#canvas{
+	width:100%;
+	height: 100%;
+}
+
+#endgame {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background-color: black;
+  /*background-image: url("../img/endgame.png");*/
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0;
+  animation: fadeIn .5s ease-in 1 forwards;
+  -webkit-animation: fadeIn .5s ease-in 1 forwards;
+}
